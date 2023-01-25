@@ -134,5 +134,5 @@
 	path = generators/mempress
 	url = https://github.com/ucb-bar/mempress.git
 [submodule "generators/BISMO_Chisel_3"]
-	path = generators/generators/BISMO_Chisel_3
+	path = generators/BISMO_Chisel_3
 	url = git@github.com:Vetleh/BISMO_Chisel_3.git
