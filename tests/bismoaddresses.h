@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include "mmio.h"
 
-#define CONTROL_ADDRESS 0x10020000
+#define CONTROL_ADDRESS 0x90020000
 
 #define OFFSET_CONTROL_ADDRESS(addr) (CONTROL_ADDRESS + addr)
 

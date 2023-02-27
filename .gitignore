@@ -19,3 +19,10 @@ tags
 .conda-env/
 .#*
 first-clone-setup-fast-log
+.bloop
+.metals
+.scalafmt.conf
+.vscode
+project/.bloop
+project/metals.sbt
+project/project
