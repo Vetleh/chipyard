@@ -102,7 +102,7 @@
 	url = https://github.com/riscv-software-src/riscv-tests.git
 [submodule "toolchains/riscv-tools/riscv-pk"]
 	path = toolchains/riscv-tools/riscv-pk
-	url = https://github.com/riscv-software-src/riscv-pk.git
+	url = https://github.com/Vetleh/riscv-pk.git
 [submodule "toolchains/riscv-tools/riscv-openocd"]
 	path = toolchains/riscv-tools/riscv-openocd
 	url = https://github.com/riscv/riscv-openocd.git
