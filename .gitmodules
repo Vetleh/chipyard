@@ -100,9 +100,6 @@
 [submodule "toolchains/riscv-tools/riscv-tests"]
 	path = toolchains/riscv-tools/riscv-tests
 	url = https://github.com/riscv-software-src/riscv-tests.git
-[submodule "toolchains/riscv-tools/riscv-pk"]
-	path = toolchains/riscv-tools/riscv-pk
-	url = https://github.com/Vetleh/riscv-pk.git
 [submodule "toolchains/riscv-tools/riscv-openocd"]
 	path = toolchains/riscv-tools/riscv-openocd
 	url = https://github.com/riscv/riscv-openocd.git
@@ -136,3 +133,6 @@
 [submodule "generators/BISMO_Chisel_3"]
 	path = generators/BISMO_Chisel_3
 	url = git@github.com:Vetleh/BISMO_Chisel_3.git
+[submodule "toolchains/riscv-tools/riscv-pk"]
+	path = toolchains/riscv-tools/riscv-pk
+	url = https://github.com/Vetleh/riscv-pk.git
