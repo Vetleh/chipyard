@@ -132,7 +132,7 @@
 	url = https://github.com/ucb-bar/mempress.git
 [submodule "generators/BISMO_Chisel_3"]
 	path = generators/BISMO_Chisel_3
-	url = git@github.com:Vetleh/BISMO_Chisel_3.git
+	url = https://github.com/Vetleh/BISMO_Chisel_3.git
 [submodule "toolchains/riscv-tools/riscv-pk"]
 	path = toolchains/riscv-tools/riscv-pk
 	url = https://github.com/Vetleh/riscv-pk.git
