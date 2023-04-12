@@ -107,7 +107,7 @@ RUNTIME_PROFILING_VFLAGS := $(if $(filter $(VERILATOR_PROFILE),all),\
 VERILATOR_THREADS ?= 1
 RUNTIME_THREADS := --threads $(VERILATOR_THREADS) --threads-dpi all
 
-VERILATOR_FST_MODE ?= 0
+VERILATOR_FST_MODE ?= 1
 TRACING_OPTS := $(if $(filter $(VERILATOR_FST_MODE),0),\
 	                  --trace,--trace-fst --trace-threads 1)
 TRACING_CFLAGS := $(if $(filter $(VERILATOR_FST_MODE),0),,-DCY_FST_TRACE)
