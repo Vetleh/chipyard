@@ -136,3 +136,5 @@
 [submodule "toolchains/riscv-tools/riscv-pk"]
 	path = toolchains/riscv-tools/riscv-pk
 	url = https://github.com/Vetleh/riscv-pk.git
+[submodule "riscv-pk"]
+	url = https://github.com/Vetleh/riscv-pk.git
