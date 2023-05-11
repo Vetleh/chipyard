@@ -147,6 +147,7 @@ lazy val testchipip = (project in file("generators/testchipip"))
 lazy val chipyard = (project in file("generators/chipyard"))
   .dependsOn(testchipip, rocketchip, boom, hwacha, sifive_blocks, sifive_cache, iocell,
     bismo,
+    bismoconfig,
     sha3, // On separate line to allow for cleaner tutorial-setup patches
     dsptools, `rocket-dsp-utils`,
     gemmini, icenet, tracegen, cva6, nvdla, sodor, ibex, fft_generator,
@@ -214,8 +215,11 @@ lazy val sha3 = (project in file("generators/sha3"))
 lazy val bismo = (project in file("generators/BISMO_Chisel_3"))
   .dependsOn(rocketchip, testchipip, midasTargetUtils)
   .settings(libraryDependencies ++= rocketLibDeps.value)
-  
 
+lazy val bismoconfig = (project in file("generators/bismo-config"))
+  .dependsOn(rocketchip, testchipip, midasTargetUtils, bismo)
+  .settings(libraryDependencies ++= rocketLibDeps.value)
+  
 lazy val gemmini = (project in file("generators/gemmini"))
   .dependsOn(testchipip, rocketchip)
   .settings(libraryDependencies ++= rocketLibDeps.value)
