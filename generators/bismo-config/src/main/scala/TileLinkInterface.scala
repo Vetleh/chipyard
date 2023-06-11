@@ -29,7 +29,7 @@ import testchipip.TLHelper
 case object BISMOFrontBusExtraBuffers extends Field[Int](0)
 
 case class BISMOTileLinkParams(
-    address: BigInt = 0x1000L,
+    address: BigInt = 0x70002000,
     addressMask: BigInt = 0xfff,
 )
 

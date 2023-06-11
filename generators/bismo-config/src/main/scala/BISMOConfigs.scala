@@ -10,8 +10,9 @@ object BISMOConfigs {
   val dpaDimLHS = 8;
   val dpaDimRHS = 8
   val dpaDimCommon = 256;
-  val lhsEntriesPerMem = 64 * 32 * 1024 / (dpaDimLHS * dpaDimCommon)
-  val rhsEntriesPerMem = 64 * 32 * 1024 / (dpaDimRHS * dpaDimCommon)
+  val lhsEntriesPerMem = 64 * 32 * 1024 / (8 * 256)
+  val rhsEntriesPerMem = 64 * 32 * 1024 / (8 * 256)
+  val cmdQueueEntries = 16
   val bismoInitParams = new BitSerialMatMulParams(
     dpaDimLHS = dpaDimLHS,
     dpaDimRHS = dpaDimRHS,
@@ -19,7 +20,8 @@ object BISMOConfigs {
     lhsEntriesPerMem = lhsEntriesPerMem,
     rhsEntriesPerMem = rhsEntriesPerMem,
     // TODO make seperate for FPGA
-    mrp = fpgatidbits.PlatformWrapper.PYNQZ1Params.toMemReqParams()
+    mrp = fpgatidbits.PlatformWrapper.PYNQZ1Params.toMemReqParams(),
+    cmdQueueEntries = cmdQueueEntries
   )
 
   // AXI
