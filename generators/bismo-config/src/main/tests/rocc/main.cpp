@@ -31,58 +31,16 @@
 #include "rocc.h"
 #include "BISMOTests.hpp"
 #include "BitSerialMatMulAccel.hpp"
-#include "padding.hpp"
-// #include "BISMOTests.hpp"
-// #include "BitSerialMatMulAccel.hpp"
-
-// read matrix dimensions from stdin and run a bit-serial matmul benchmark
-// void benchmark_interactive() {
-//   while(1) {
-//     int rows, depth, cols, lhsbits, rhsbits, lhssigned, rhssigned;
-//     float secs;
-//     cout << "Enter rows depth cols, 0 to skip, -1 to quit " << endl;
-//     cin >> rows;
-//     if(rows == 0) {
-//       break;
-//     } else if (rows == -1) {
-//       exit(0);
-//     }
-//     cin >> depth >> cols;
-//     cout << "Enter lhs and rhs bits: " << endl;
-//     cin >> lhsbits >> rhsbits;
-//     cout << "Enter signedness (1 or 0) for lhs and rhs: " << endl;
-//     cin >> lhssigned >> rhssigned;
-
-//     test(
-//       to_string(rows) + "x" + to_string(depth) + "x" + to_string(cols) + ":" +
-//       to_string(lhsbits) + "b/" + to_string(rhsbits) + "b",
-//       acc, rows, cols, depth, lhsbits, rhsbits, lhssigned, rhssigned
-//     );
-//   }
-// }
-
-// void bismo_rocc_write(int idx, unsigned long data)
-// {
-//   ROCC_INSTRUCTION_SS(0, data, idx, 0);
-// }
-
-// unsigned long bismo_rocc_read(int idx)
-// {
-//   unsigned long value;
-//   ROCC_INSTRUCTION_DSS(0, value, 0, idx, 1);
-//   return value;
-// }
 
 int main(int argc, char const *argv[])
 {
-  // WrapperRegDriver * platform = initPlatform();
   BitSerialMatMulAccelDriver *acc = new BitSerialMatMulAccelDriver();
 
   acc->print_hwcfg_summary();
 
   bool all_OK = true;
-  // all_OK &= test_binary_onchip_onetile(acc);
-  // all_OK &= test_binary_onchip_multitile(acc);
+  all_OK &= test_binary_onchip_onetile(acc);
+  all_OK &= test_binary_onchip_multitile(acc);
   all_OK &= test_binary_offchip_multitile(acc);
   all_OK &= test_binary_offchip_widerows_multitile(acc);
 
@@ -96,6 +54,5 @@ int main(int argc, char const *argv[])
   }
 
   delete acc;
-  // deinitPlatform(platform);
   return 0;
 }
